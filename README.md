@@ -19,6 +19,7 @@
 A demonstration, created with [`create-wasm-app`](https://github.com/rustwasm/create-wasm-app/) which
 utilises the [`planete-wasm`](https://github.com/Colocasian/planete-wasm) library to simulate the rocky
 planets of the solar system (plus a bonus Halley's comet).
+
 **Note:** The planets' radii are not in scale with their relative distances, but the distances between their
 centre are relatively in scale.
 
