@@ -1,0 +1,49 @@
+{
+  "name": "solar-planete-wasm-demo",
+  "version": "0.1.0",
+  "description": "create a demo app to apply planete-wasm package",
+  "main": "index.js",
+  "private": true,
+  "bin": {
+    "create-wasm-app": ".bin/create-wasm-app.js"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Colocasian/solar-planete-wasm-demo.git"
+  },
+  "keywords": [
+    "webassembly",
+    "wasm",
+    "rust",
+    "webpack"
+  ],
+  "author": "Rishvic Pushpakaran <rishvic@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Colocasian/solar-planete-wasm-demo/issues"
+  },
+  "homepage": "https://github.com/Colocasian/solar-planete-wasm-demo#readme",
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "trailingComma": "es5",
+    "endOfLine": "lf"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.0",
+    "hello-wasm-pack": "^0.1.0",
+    "prettier": "2.1.2",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "papaparse": "^5.3.0",
+    "planete-wasm": "file:lib/planete-wasm/pkg"
+  }
+}

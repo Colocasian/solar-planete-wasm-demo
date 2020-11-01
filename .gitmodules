@@ -1,0 +1,3 @@
+[submodule "lib/planete-wasm"]
+	path = lib/planete-wasm
+	url = https://github.com/Colocasian/planete-wasm.git
