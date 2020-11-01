@@ -1,11 +1,11 @@
 <div align="center">
   <h1><code>solar-planete-wasm-demo</code></h1>
 
-  <strong
-    >A demonstration of the
-    <a href="https://github.com/Colocasian/planete-wasm/" target="_blank"><code>planete-wasm</code></a> 🦀
-    Rust + 🕸️ Wasm library, bundled using webpack</strong
-  >
+  <strong>
+    A demonstration of the
+    <a href="https://github.com/Colocasian/planete-wasm/" target="_blank"><code>planete-wasm</code></a>
+    🦀 Rust + 🕸️ Wasm library, bundled using webpack
+  </strong>
 
   <h3>
     <a href="https://github.com/Colocasian/planete-wasm/"><code>planete-wasm</code></a>
