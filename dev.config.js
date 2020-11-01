@@ -9,5 +9,5 @@ module.exports = {
   },
   mode: "development",
   devtool: "inline-source-map",
-  plugins: [new CopyWebpackPlugin(["index.html"])],
+  plugins: [new CopyWebpackPlugin({ patterns: ["index.html", "favicon.ico"] })],
 };
