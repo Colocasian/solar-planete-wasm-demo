@@ -38,7 +38,7 @@ centre are relatively in scale.
 
 1. Clone git repo and update submodules
 ```sh
-git clone --recurse-submodules https://github.com/Colocasian/solar-planete-wasm-demo.git
+git clone https://github.com/Colocasian/solar-planete-wasm-demo.git
 cd ./solar-planete-wasm-demo
 ```
 2.
@@ -46,19 +46,23 @@ cd ./solar-planete-wasm-demo
 ```sh
 # install axios
 npm install --no-save axios
-# run download script
-cd ./.bin
-./download-planete-wasm.js
-# if on *nix, extract the tar.gz; if on windows, extract the zip
-# move the extracted `planete-wasm/` to `lib/`
-mv ./planete-wasm ../lib/planete-wasm/pkg
+# run download script; downloads, extracts, and places the file to the correct place; need `bsdtar` and `mv`
+./.bin/download-planete-wasm.js
 ```
   * If you want to build `planete-wasm` library, use `wasm-pack`
 ```sh
+# Get the source code
+git submodule init
+git submodule update
 cd ./lib/planete-wasm
+# build `planete-wasm`
 wasm-pack build
 ```
-3. Build the website
+3. Install node dependencies
+```sh
+npm install
+```
+4. Build the website
   * To build a production-ready bundle, build with `npm run build`. A bundle will be generated in the `dist` directory.
   * To run a local development server, do `npm run start`. This will run a dev instance of the page on [http://localhost:8080/](http://localhost:8080/).
 
@@ -68,5 +72,5 @@ Licensed under the ISC license.
 
 ### Contributions
 
-> This product contains software developed by
+> This product contains software developed by<br>
 > Rishvic Pushpakaran <rishvic@gmail.com>
