@@ -4,11 +4,8 @@
   "description": "create a demo app to apply planete-wasm package",
   "main": "index.js",
   "private": true,
-  "bin": {
-    "create-wasm-app": ".bin/create-wasm-app.js"
-  },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack",
     "start": "webpack --config dev.config.js serve"
   },
   "repository": {
