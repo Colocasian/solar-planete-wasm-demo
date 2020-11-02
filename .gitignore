@@ -1,2 +1,7 @@
 node_modules/
 /dist/
+
+# ignore planete-wasm releases
+planete-wasm-*.*.*.tar.bz2
+planete-wasm-*.*.*.tar.gz
+planete-wasm-*.*.*.zip

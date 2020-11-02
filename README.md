@@ -27,20 +27,33 @@ centre are relatively in scale.
 
 ### Build Prerequisites
 
-* [Rust 1.30.0 or later](https://www.rust-lang.org/tools/install) (to build `planete-wasm`).
-* [wasm-pack](https://rustwasm.github.io/wasm-pack/installer) (to build `planete-wasm`)
 * [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (to build the website)
 
-### Building Website
+#### If you want to build planete-wasm Rust project
+
+* [Rust 1.30.0 or later](https://www.rust-lang.org/tools/install)
+* [wasm-pack](https://rustwasm.github.io/wasm-pack/installer)
+
+### Build Instructions
 
 1. Clone git repo and update submodules
 ```sh
-git clone https://github.com/Colocasian/solar-planete-wasm-demo.git
+git clone --recurse-submodules https://github.com/Colocasian/solar-planete-wasm-demo.git
 cd ./solar-planete-wasm-demo
-git submodule init
-git submodule update
 ```
-2. Build `planete-wasm` WebAssembly library
+2.
+  * If you don't want to build the planete-wasm library, you can download prebuilt npm project by running `.bin/download-planete-wasm.js`. **NOTE:** *axios* is required as a dependency for the script. An archive will be downloaded in the `.bin/` directory. Extract the archive, and move `planete-wasm` npm package to `lib/planete-wasm/pkg`
+```sh
+# install axios
+npm install --no-save axios
+# run download script
+cd ./.bin
+./download-planete-wasm.js
+# if on *nix, extract the tar.gz; if on windows, extract the zip
+# move the extracted `planete-wasm/` to `lib/`
+mv ./planete-wasm ../lib/planete-wasm/pkg
+```
+  * If you want to build `planete-wasm` library, use `wasm-pack`
 ```sh
 cd ./lib/planete-wasm
 wasm-pack build
