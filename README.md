@@ -42,7 +42,7 @@ git clone https://github.com/Colocasian/solar-planete-wasm-demo.git
 cd ./solar-planete-wasm-demo
 ```
 2.
-  * If you don't want to build the planete-wasm library, you can download prebuilt npm project by running `.bin/download-planete-wasm.js`. **NOTE:** *axios* is required as a dependency for the script. An archive will be downloaded in the `.bin/` directory. Extract the archive, and move `planete-wasm` npm package to `lib/planete-wasm/pkg`
+  * If you don't want to build the planete-wasm library, you can download prebuilt npm project by running `.bin/download-planete-wasm.js`. **NOTE:** *axios* is required as a dependency for the script.
 ```sh
 # install axios
 npm install --no-save axios
