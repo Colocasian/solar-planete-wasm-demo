@@ -5,10 +5,18 @@ import("planete-wasm")
     const scale_down = 8e8;
 
     const canvas = document.getElementById("planet-canvas");
-    const canvas_width = 1270;
-    const canvas_height = 600;
-    canvas.width = canvas_width;
-    canvas.height = canvas_height;
+
+    let canvas_width = window.innerWidth;
+    let canvas_height = window.innerHeight;
+    const resizeCanvas = () => {
+      canvas_width = window.innerWidth;
+      canvas_height = window.innerHeight;
+      canvas.width = Math.max(0, canvas_width - 10);
+      canvas.height = Math.max(0, canvas_height - 20);
+    };
+    resizeCanvas();
+    window.onresize = resizeCanvas;
+
     const ctx = canvas.getContext("2d");
 
     const planet_system = PlanetSystem.new();
