@@ -2,7 +2,7 @@ import drawPlanets from "./src/drawPlanets";
 
 import("planete-wasm")
   .then(({ PlanetSystem }) => {
-    const scale_down = 5e11;
+    const scale_down = 6e11;
 
     const canvas = document.getElementById("planet-canvas");
 
@@ -22,10 +22,38 @@ import("planete-wasm")
     const planet_system = PlanetSystem.new();
 
     planet_system.add_planet(1.989e30, 0, 0, 0, 0); // Sun
-    planet_system.add_planet(5.972e24, 1.52e11, 0, 0, 2.929e4); // Earth
-    planet_system.add_planet(4.867e24, 1.08939e11, 0, 0, 3.478e4); // Venus
-    planet_system.add_planet(3.285e23, 6.98169e10, 0, 0, 3.886e4); // Mercury
-    planet_system.add_planet(6.39e23, 2.492e11, 0, 0, 2.2e4); // Mars
+    // Earth
+    planet_system.add_planet(
+      5.972e24,
+      148056363673.96326,
+      34399319406.68505,
+      -6628.658325143456,
+      28530.07165796305
+    );
+    // Venus
+    planet_system.add_planet(
+      4.867e24,
+      81628272145.29555,
+      72142434860.3065,
+      -23032.28306154325,
+      26060.743216050996
+    );
+    // Mercury
+    planet_system.add_planet(
+      3.285e23,
+      68108797701.21348,
+      -15348980464.68162,
+      8543.223501151266,
+      37909.272377735986
+    );
+    // Mars
+    planet_system.add_planet(
+      6.39e23,
+      -101199813225.89308,
+      -227726234332.025,
+      20104.242196246185,
+      -8934.172917213675
+    );
     planet_system.add_planet(2.2e14, -8.766e10, 0, 0, 5.458e4); // Halley's comet
 
     const radii = [15, 5, 4.75, 1.915, 2.66, 1];
