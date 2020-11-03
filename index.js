@@ -6,13 +6,13 @@ import("planete-wasm")
 
     const canvas = document.getElementById("planet-canvas");
 
-    let canvas_width = window.innerWidth;
-    let canvas_height = window.innerHeight;
+    let canvas_width = Math.max(50, window.innerWidth);
+    let canvas_height = Math.max(50, window.innerHeight);
     const resizeCanvas = () => {
-      canvas_width = window.innerWidth;
-      canvas_height = window.innerHeight;
-      canvas.width = Math.max(40, canvas_width - 10);
-      canvas.height = Math.max(30, canvas_height - 20);
+      canvas_width = Math.max(50, window.innerWidth);
+      canvas_height = Math.max(50, window.innerHeight);
+      canvas.width = canvas_width - 10;
+      canvas.height = canvas_height - 20;
     };
     resizeCanvas();
     window.onresize = resizeCanvas;
