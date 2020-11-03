@@ -15,7 +15,7 @@ export default function drawPlanets(planet_system, visuals, canvas) {
     canvas.ctx.beginPath();
     canvas.ctx.arc(
       parseFloat(planet[0]) / local_scale_down + canvas.width / 2,
-      parseFloat(planet[1]) / local_scale_down + canvas.height / 2,
+      -parseFloat(planet[1]) / local_scale_down + canvas.height / 2,
       visuals.radii[idx],
       0,
       2 * Math.PI
