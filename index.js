@@ -11,8 +11,8 @@ import("planete-wasm")
     const resizeCanvas = () => {
       canvas_width = window.innerWidth;
       canvas_height = window.innerHeight;
-      canvas.width = Math.max(0, canvas_width - 10);
-      canvas.height = Math.max(0, canvas_height - 20);
+      canvas.width = Math.max(40, canvas_width - 10);
+      canvas.height = Math.max(30, canvas_height - 20);
     };
     resizeCanvas();
     window.onresize = resizeCanvas;
